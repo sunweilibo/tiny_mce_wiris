@@ -124,10 +124,15 @@ export default class Image {
     }
     if (width.indexOf('ex') >= 0) {
       // svg返回的图片大小用的ex作为单位，转换的时候，把x近似看作字体的一半
-      const fontSize = parseFloat(getComputedStyle(window.document.firstElementChild).fontSize);
-      width = parseFloat(width) * fontSize / 2;
-      height = parseFloat(height) * fontSize / 2;
-      baseline = parseFloat(baseline) * fontSize / 2;
+      // const fontSize = parseFloat(getComputedStyle(window.document.firstElementChild).fontSize);
+      // const fontSize = 20;
+      // width = parseFloat(width) * fontSize / 2;
+      // height = parseFloat(height) * fontSize / 2;
+      // baseline = parseFloat(baseline) * fontSize / 2;
+      const pin = 9;
+      width = parseFloat(width) * pin;
+      height = parseFloat(height) * pin;
+      baseline = parseFloat(baseline) * pin;
     }
     img.width = width;
     img.height = height;

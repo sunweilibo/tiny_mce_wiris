@@ -14,11 +14,11 @@ module.exports = {
     optimization: {
         minimizer: [
             // Javascript optimizer mainly to minimize js files.
-            // new UglifyJsPlugin({
-            //     cache: true,
-            //     parallel: true,
-            //     sourceMap: true // Set to true if you want JS source maps.
-            // }),
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true,
+                sourceMap: false // Set to true if you want JS source maps.
+            }),
         ]
     },
     module: {
